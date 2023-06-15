@@ -1,6 +1,7 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar({ setAlphabetic , setPrice }) {
+  
   return (
     <div>
       <strong>Sort by:</strong>
@@ -10,7 +11,7 @@ function SearchBar() {
           value="Alphabetically"
           name="sort"
           checked={null}
-          onChange={null}
+          onChange={() => setAlphabetic((current) => !current)}
         />
         Alphabetically
       </label>
@@ -20,7 +21,7 @@ function SearchBar() {
           value="Price"
           name="sort"
           checked={null}
-          onChange={null}
+          onChange={() => setPrice((current) => !current)}
         />
         Price
       </label>
